@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <!-- 配置为开发模式 -->
+    <constant name="struts.devMode" value="false" />
+    <!-- 把扩展名配置为action -->
+    <constant name="struts.action.extension" value="action" />
+    <!-- 把主题配置为 simple -->
+    <constant name="struts.ui.theme" value="simple" />
+    
+    
+    <package name="default" namespace="/" extends="struts-default">
+    
+	    <!-- 配置测试用得Action， (还未与spring 整合) class属性写类的全名-->
+	     <!-- <action name="test" class="cn.itcast.oa.test.TestAction">
+	    	<result name="success">/test.jsp</result>
+	    </action> -->
+	    
+	    
+	    <!-- 当Strus2 与spring 整合后的区别，class 属性可以使用bean 的名称 -->
+	    <action name="test" class="cn.itcast.oa.test.TestAction">
+	    	<result name="success">/test.jsp</result>
+	    </action>
+    </package>
+    <!-- Add packages here -->
+
+</struts>
